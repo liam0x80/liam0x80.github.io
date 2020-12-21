@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<div class="home">
+    <div class="card">
+        我现在用语雀写博客，以下文章同步自<a href="https://www.yuque.com/liamchang/blog">https://www.yuque.com/liamchang/blog</a>
+    </div>
+    {% for post in site.posts %}
+    <div class="card">
+        <div class="title">
+            <h2>
+                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+            </h2>
+            <div class="label">
+                <div class="label-card">
+                    <i class="fa fa-calendar"></i>{{ post.date | date: "%F" }}
+                </div>
+                <div class="label-card">
+                    {% if post.author %}<i class="fa fa-user"></i>{{ post.author | escape }}
+                    {% endif %}
+                </div>
+                <div class="label-card">
+                    {% if page.meta %}<i class="fa fa-key"></i>{{ page.meta | escape }} {% endif %}
+                </div>
+
+                <div class="label-card">
+                    {% include tag.html %}
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="excerpt">
+            {{post.excerpt | escape}}
+        </div>
+    </div>
+    {% endfor %}
+</div>

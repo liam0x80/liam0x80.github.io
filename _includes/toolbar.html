@@ -1,0 +1,13 @@
+<div class="toolbar">
+    {% if page.path contains '_posts' %}
+    <div class="toc-container toc-style">
+        {% include toc.html h_min=2 h_max=3 html=content %}
+    </div>
+    {% endif %}
+    <div class="btn-list">
+        {% if page.path contains '_posts' %}
+        <button class="content-trigger"><i class="fas fa-list"></i></button>
+        {% endif %}
+        <button class="backtotop-trigger"><i class="fas fa-arrow-up"></i></button>
+    </div>
+</div>

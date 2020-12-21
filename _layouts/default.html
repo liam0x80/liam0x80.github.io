@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    <div class="content">
+      {% include toolbar.html %}
+      {{ content }}
+    </div>
+    <script src="{{ " /js/main.js " | prepend: site.baseurl }}" charset="utf-8"></script>
+    {% include analytics.html %}
+  </body>
+</html>
