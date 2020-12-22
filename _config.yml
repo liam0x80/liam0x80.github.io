@@ -22,3 +22,6 @@ permalink: /:year/:month/:title.html
 commonmark:
   options: ["SMART", "FOOTNOTES"]
   extensions: ["strikethrough", "autolink", "table", "tagfilter"]
+
+plugins:
+  - jemoji

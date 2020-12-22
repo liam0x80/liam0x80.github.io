@@ -245,6 +245,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-commonmark-ghpages
+  jemoji
 
 BUNDLED WITH
    2.0.2
